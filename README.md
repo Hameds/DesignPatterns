@@ -29,7 +29,7 @@ Creational Design Patterns
 ==========================
 این دیزاین‌پترن‌ها بر الگوهای چگونگی ساخت یک شیء یا چند شیء به هم مرتبط متمرکز هستند.
 
- * [Factory Method](#-factory-method)
+ * [Factory Method](#factory-method)
  * سایر الگوها به زودی ...
  
 Factory Method
