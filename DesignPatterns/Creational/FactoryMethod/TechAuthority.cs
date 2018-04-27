@@ -1,5 +1,5 @@
 ﻿using System;
-namespace DesignPatterns.FactoryMethod
+namespace DesignPatterns.Creational.FactoryMethod
 {
     public class TechAuthority : IGovernmentAuthority
     {
