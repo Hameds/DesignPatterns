@@ -1,6 +1,7 @@
 ﻿using System;
 using DesignPatterns.Creational.FactoryMethod;
 using DesignPatterns.Creational.Prototype;
+using DesignPatterns.Creational.Singleton;
 
 namespace DesignPatterns
 {
@@ -11,10 +12,9 @@ namespace DesignPatterns
             Console.WriteLine("Welcome to design patterns sample. watch design pattern videos (in Persian): http://youtube.com/softwaretalks");
 
             //Call Creational Design Patterns examples
-            Console.WriteLine("calling creational design patterns examples");
             FactoryMethodExample();
             PrototypeExample();
-
+            SingletonExample();
 
             Console.WriteLine("press any key to exit ...");
             Console.ReadKey();
@@ -25,7 +25,7 @@ namespace DesignPatterns
 
         public static void FactoryMethodExample()
         {
-            Console.WriteLine("Factory Method example");
+            Console.WriteLine("---------- Factory Method example");
             var azariJahromi = new ICTMinister();
             azariJahromi.Manage();
 
@@ -35,7 +35,7 @@ namespace DesignPatterns
 
         public static void PrototypeExample()
         {
-            Console.WriteLine("Prototype example");
+            Console.WriteLine("---------- Prototype example");
 
             var branch1 = new BankBranch("1", "Behnam");
             Console.WriteLine(branch1.Code);
@@ -48,6 +48,15 @@ namespace DesignPatterns
             Console.WriteLine(branch2.ManagerName);
             Console.WriteLine(branch1.Code);
             Console.WriteLine(branch1.ManagerName);
+        }
+
+        public static void SingletonExample()
+        {
+            Console.WriteLine("---------- Singleton example");
+            var presidentRouhani = President.Instance;
+            var president = President.Instance;
+
+            Console.WriteLine($"Is presidentRouhani object ==  president object? Answere is { (presidentRouhani == president).ToString()}");
         }
 
         #endregion

@@ -7,5 +7,6 @@
 
   <ItemGroup>
     <Folder Include="Creational\FactoryMethod\" />
+    <Folder Include="Creational\Singleton\" />
   </ItemGroup>
 </Project>
