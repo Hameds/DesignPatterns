@@ -31,6 +31,7 @@ Creational Design Patterns
 
  * [Factory Method](#factory-method)
  * [Prototype](#prototype)
+ * [Singleton](#singleton)
  * سایر الگوها به زودی ...
  
 Factory Method
@@ -55,6 +56,12 @@ Prototype
 نیاز تغییر دهیم
 
 
+Singleton
+---------
+این الگو را زمانی استفاده می‌کنیم که بخواهیم یک instance از شیء داشته باشیم و حتی با و هنگام *new* کردن در صورتی شیء جدیدی ایجاد شود که قبلاً وجود نداشته باشد. می‌توانید توضیحات <a href="https://fa.wikipedia.org/wiki/%D8%A7%D9%84%DA%AF%D9%88%DB%8C_%DB%8C%DA%AF%D8%A7%D9%86%D9%87">الگوی Singleton در ویکی‌پدیا فارسی</a> را نیز مطالعه کنید
+
+مثال
+> در هر لحظه فقط یک رئیس جمهور داریم، پس هر چقدر از کلاس `President` شیء جدید درست کنیم باز هم باید همان رئیس جمهور برگردانده شود 
 
 Structural Design Patterns
 ==========================
