@@ -1,4 +1,5 @@
 ﻿using System;
+using DesignPatterns.Creational.Builder;
 using DesignPatterns.Creational.FactoryMethod;
 using DesignPatterns.Creational.Prototype;
 using DesignPatterns.Creational.Singleton;
@@ -15,6 +16,7 @@ namespace DesignPatterns
             FactoryMethodExample();
             PrototypeExample();
             SingletonExample();
+            BuilderExample();
 
             Console.WriteLine("press any key to exit ...");
             Console.ReadKey();
@@ -57,6 +59,16 @@ namespace DesignPatterns
             var president = President.Instance;
 
             Console.WriteLine($"Is presidentRouhani object ==  president object? Answere is { (presidentRouhani == president).ToString()}");
+        }
+
+        public static void BuilderExample()
+        {
+            Console.WriteLine("---------- Builder example");
+            var myWebSite = new WebSiteBuilder("My Site").AddBlogModule()
+                                .AddImageGalleryModule()
+                                .AddNewsModule()
+                                .Build();
+            Console.WriteLine(myWebSite.GetSiteDescription());
         }
 
         #endregion
