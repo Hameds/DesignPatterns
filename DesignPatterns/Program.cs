@@ -3,6 +3,7 @@ using DesignPatterns.Creational.Builder;
 using DesignPatterns.Creational.FactoryMethod;
 using DesignPatterns.Creational.Prototype;
 using DesignPatterns.Creational.Singleton;
+using DesignPatterns.Structural.Adapter;
 
 namespace DesignPatterns
 {
@@ -17,6 +18,9 @@ namespace DesignPatterns
             PrototypeExample();
             SingletonExample();
             BuilderExample();
+
+            //Call Structural Design Patterns examples
+            AdapterExample();
 
             Console.WriteLine("press any key to exit ...");
             Console.ReadKey();
@@ -71,6 +75,18 @@ namespace DesignPatterns
             Console.WriteLine(myWebSite.GetSiteDescription());
         }
 
+        #endregion
+
+        #region Call Structural Desgin Patterns
+        public static void AdapterExample()
+        {
+            Console.WriteLine("---------- Adapter example");
+            var bitcoinPayment = new BitcoinPayment();
+            var bitcoinAdapter = new BitcoinAdapter(bitcoinPayment);
+
+            var shop = new Shop();
+            shop.Purchase(bitcoinAdapter,1000);
+        }
         #endregion
     }
 }
