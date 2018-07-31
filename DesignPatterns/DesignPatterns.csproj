@@ -8,7 +8,6 @@
   <ItemGroup>
     <Folder Include="Creational\FactoryMethod\" />
     <Folder Include="Creational\Singleton\" />
-    <Folder Include="Structural\" />
     <Folder Include="Structural\Adapter\" />
   </ItemGroup>
 </Project>

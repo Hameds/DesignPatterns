@@ -4,6 +4,7 @@ using DesignPatterns.Creational.FactoryMethod;
 using DesignPatterns.Creational.Prototype;
 using DesignPatterns.Creational.Singleton;
 using DesignPatterns.Structural.Adapter;
+using DesignPatterns.Structural.Proxy;
 
 namespace DesignPatterns
 {
@@ -21,6 +22,7 @@ namespace DesignPatterns
 
             //Call Structural Design Patterns examples
             AdapterExample();
+            ProxyExample();
 
             Console.WriteLine("press any key to exit ...");
             Console.ReadKey();
@@ -86,6 +88,14 @@ namespace DesignPatterns
 
             var shop = new Shop();
             shop.Purchase(bitcoinAdapter,1000);
+        }
+        public static void ProxyExample()
+        {
+            Console.WriteLine("---------- Adapter example");
+            var payment = new OnlinePayment(new CashPayment());
+            payment.Pay(200000);
+            payment.Pay(1000);
+
         }
         #endregion
     }
