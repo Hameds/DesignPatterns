@@ -91,7 +91,7 @@ namespace DesignPatterns
         }
         public static void ProxyExample()
         {
-            Console.WriteLine("---------- Adapter example");
+            Console.WriteLine("---------- Proxy example");
             var payment = new OnlinePayment(new CashPayment());
             payment.Pay(200000);
             payment.Pay(1000);
